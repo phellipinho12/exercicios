@@ -1,13 +1,16 @@
-#quantidade = 40
-#preco =  20
+vendas = [
+    {"categoria": "eletrônicos", "valor": 1200},
+    {"categoria": "livros", "valor": 200},
+    {"categoria": "eletrônicos", "valor": 800}
+]
 
-#if quantidade > 0 and preco > 0:
-   # print("valores validos")
-#else:
-#    print("valores invalidos")
+total_por_categoria = {}
+for venda in vendas:
+    categoria = venda["categoria"]
+    valor = venda["valor"]
+    if categoria in total_por_categoria:
+        total_por_categoria[categoria] += valor
+    else:
+        total_por_categoria[categoria] = valor
 
-
-lista_alunos = ["fabio","joao","luciano"]
-
-for aluno in lista_alunos:
-    print(aluno)
+print(total_por_categoria)
